@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>“织路者”计划 (Project Weaver)</title>
+    <style>
+        /* 引入更优雅的谷歌字体 */
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;400&display=swap');
+
+        /* * 全新的配色方案
+         * --bg-color: 温暖的米白背景
+         * --text-color: 深紫色的正文，比黑色更柔和
+         * --heading-color: 更深的紫色，用于标题
+         * --accent-color: 尘粉玫瑰色，用于点缀和强调
+        */
+        :root {
+            --bg-color: #FDF8F5;
+            --text-color: #5C4B51;
+            --heading-color: #3D2C32;
+            --accent-color: #DDA8A2;
+            --card-bg-color: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Montserrat', 'Noto Sans SC', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.9;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 50px 25px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4em;
+            color: var(--heading-color);
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.3em;
+            color: var(--accent-color);
+            margin-top: 5px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        section {
+            margin-bottom: 70px;
+        }
+
+        h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5em;
+            color: var(--heading-color);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        /* 标题下的装饰线 */
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: var(--accent-color);
+            margin: 15px auto 0;
+        }
+
+        p {
+            font-size: 1.1em;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: var(--card-bg-color);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 25px rgba(92, 75, 81, 0.08);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 35px rgba(92, 75, 81, 0.12);
+        }
+
+        .card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6em;
+            color: var(--heading-color);
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .card p {
+            font-size: 1em;
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        .highlight-section {
+            background-color: transparent;
+            border: 1px solid #e0d1d0;
+            padding: 35px;
+            border-radius: 10px;
+            margin-top: 25px;
+        }
+        
+        .highlight-section h3 {
+             font-family: 'Cormorant Garamond', serif;
+             margin-top: 0;
+             color: var(--heading-color);
+             font-size: 1.5em;
+        }
+        
+        .highlight-section strong {
+            color: var(--heading-color);
+            font-weight: 400;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid #e0d1d0;
+        }
+        
+        .contact-links a {
+            margin: 0 15px;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-links a:hover {
+            transform: scale(1.1);
+        }
+
+        .contact-links svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--text-color);
+        }
+        
+        footer p {
+            font-size: 0.9em;
+            color: #999;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>“织路者”计划</h1>
+            <p>Project Weaver</p>
+        </header>
+
+        <main>
+            <section id="mission">
+                <h2>我们的使命</h2>
+                <p>我们致力于利用Web3技术，为那些在传统父权历史中被边缘化、被遗忘的女性，建立一个不可篡改、无需许可、世代传承的“母系数字家族谱”。我们拒绝遗忘，并相信每一位女性都是历史的创造者。我们要做的，就是把这些散落的道路，重新编织成一片永不磨灭的、属于女性的星图。</p>
+            </section>
+
+            <section id="why-blockchain">
+                <h2>为何选择区块链？</h2>
+                 <div class="card-container">
+                    <div class="card">
+                        <h3>不可篡改</h3>
+                        <p>一旦写入，女性的故事和连接就无法被任何权威删除或修改。这是对历史修正主义最坚决的反抗。</p>
+                    </div>
+                    <div class="card">
+                        <h3>无需许可</h3>
+                        <p>每一个女性，都有权将自己连接到她的母系血脉上，无需经过任何中心化机构或家族长辈的“批准”。</p>
+                    </div>
+                    <div class="card">
+                        <h3>世代传承</h3>
+                        <p>基于去中心化网络，这个家族谱可以超越任何单一的公司或组织，实现真正的永续存在。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="challenges">
+                <h2>我们的思考与解法</h2>
+                <p>一个伟大的项目，需要面对深刻的难题。在构思中，我们遇到了挑战，并找到了我们的方向：</p>
+                
+                <div class="highlight-section">
+                    <h3>真实性 · Authenticity</h3>
+                    <p><strong>挑战：</strong>如何保证记录的真实性？<br>
+                    <strong>我们的解法：</strong>设计“母系信任链”的社会化验证机制。新成员的加入，必须得到其直系母亲及多位在册亲属的共同签名“见证”，用“亲属共识”确保记录的严肃性。</p>
+                </div>
+                <br>
+                <div class="highlight-section">
+                    <h3>隐私与意愿 · Privacy & Consent</h3>
+                    <p><strong>挑战：</strong>如何尊重每个个体的隐私和意愿？<br>
+                    <strong>我们的解法：</strong>这是一个重要的顿悟！我们采用“链上关系，链下隐私”的混合架构。只将匿名的“连接关系”上链以彰显网络力量，而所有个人敏感信息（姓名、故事等）全部在链下加密，由用户自己掌控授权。</p>
+                </div>
+            </section>
+
+            <section id="the-choice">
+                <h2>项目的灵魂：我们的抉择</h2>
+                <p>现在，我们正站在一个核心的十字路口，需要决定这个项目的最终气质。这是我们希望与你，我们未来的伙伴，共同探讨的问题：</p>
+                <div class="card-container">
+                    <div class="card">
+                        <h3>A. 私密堡垒</h3>
+                        <p>以个人隐私和意愿为最高准则，默认一切私密。它更像一个安全的家族保险箱。</p>
+                    </div>
+                    <div class="card">
+                        <h3>B. 半公开纪念碑</h3>
+                        <p>将匿名的“连接关系”公开，让世界看到这张女性网络的力量。它更像一个宣言。</p>
+                    </div>
+                     <div class="card">
+                        <h3>C. 历史档案馆</h3>
+                        <p>生者的信息完全私密，而逝去的先辈（在家人同意后）的信息可以被“解密归档”，成为公共历史。</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="contact-links">
+                <a href="https://github.com/yangyuwen-bri" target="_blank" title="GitHub">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297 24 5.67 18.627.297 12 .297z"/></svg>
+                </a>
+                <a href="https://x.com/huang61520" target="_blank" title="Twitter">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.223.085 4.93 4.93 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                </a>
+            </div>
+            <p>一个正在构思中的项目，期待与你同行。</p>
+        </footer>
+    </div>
+
+</body>
+</html>
